@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f7f7f7; /* Light gray background */
+            background-color: #f7f7f7; 
         }
 
         header, nav, main, footer {
@@ -19,20 +19,20 @@
         }
 
         header {
-            background-color: #2c3e50; /* Dark blue-gray */
-            color: #ecf0f1; /* Light gray text */
+            background-color: #2c3e50; 
+            color: #ecf0f1;
             padding: 1em;
             text-align: center;
         }
 
         nav {
-            background-color: #34495e; /* Dark blue-gray */
+            background-color: #34495e;
             padding: 0.5em;
             text-align: center;
         }
 
         nav a {
-            color: #ecf0f1; /* Light gray text */
+            color: #ecf0f1;
             text-decoration: none;
             padding: 0.5em 1em;
             margin: 0 1em;
@@ -41,7 +41,7 @@
         }
 
         nav a:hover {
-            background-color: #2c3e50; /* Slightly darker blue-gray on hover */
+            background-color: #2c3e50; 
         }
 
         main {
@@ -52,17 +52,17 @@
         }
 
         section {
-            border: 1px solid #bdc3c7; /* Light gray border */
+            border: 1px solid #bdc3c7; 
             padding: 15px;
             border-radius: 5px;
-            background-color: #ecf0f1; /* Light gray background */
+            background-color: #ecf0f1;
             margin-bottom: 20px;
             opacity: 0;
             animation: fadeIn 1s forwards;
         }
 
         h2 {
-            color: #34495e; /* Dark blue-gray heading */
+            color: #34495e; 
         }
 
         ul {
@@ -123,13 +123,13 @@
         .profile-info .greet,
         .profile-info .year {
             font-family: Georgia;
-            color: #7f8c8d; /* Dark gray text */
+            color: #7f8c8d;
             font-size: 20px;
         }
 
         .profile-info .name {
             font-family: Georgia;
-            color: #2c3e50; /* Dark blue-gray text */
+            color: #2c3e50; 
             font-size: 35px;
         }
 
@@ -140,21 +140,21 @@
         }
 
         footer {
-            background-color: #2c3e50; /* Dark blue-gray */
-            color: #ecf0f1; /* Light gray text */
+            background-color: #2c3e50; 
+            color: #ecf0f1; 
             padding: 3em;
             text-align: center;
         }
 
         .contact-icons {
             display: flex;
-            justify-content: flex-start; /* Align to the left */
+            justify-content: flex-start; 
             align-items: center;
             margin-left: 5em;
         }
 
         .icon-link {
-            margin-right: 20px; /* Adjust margin as needed */
+            margin-right: 20px; 
             opacity: 1;
             transition: opacity 0.3s ease-in-out;
         }
@@ -164,20 +164,19 @@
             transform: translateY(-3px);
         }
 
-        /* Ensure all icons have the same size */
+        
         .contact-icons .icon-link img {
-            width: 50px; /* Adjust the size as needed */
-            height: 50px; /* Adjust the size as needed */
+            width: 50px; 
+            height: 50px; 
         }
 
-        /* Adjust the x-axis positions of the icons */
         .contact-icons .icon-link:nth-child(1) {
-            transform: translateX(-30px); /* Adjust as needed */
+            transform: translateX(-30px); 
         }
 
         
         .contact-icons .icon-link:nth-child(3) {
-            transform: translateX(30px); /* Adjust as needed */
+            transform: translateX(30px);
         }
 
         #projects {
@@ -193,7 +192,7 @@
         }
         .project-1,
         .project-2 {
-            width: 30%; /* Adjust the width as needed */
+            width: 30%; 
             box-sizing: border-box;
             margin-bottom: 7em;
             margin-top: 10em;
@@ -201,7 +200,7 @@
             box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.1);
         }
         .project-3 {
-            width: 50%; /* Adjust the width as needed */
+            width: 50%; 
             box-sizing: border-box;
             margin-bottom: 7em;
             margin-top: 10em;   
@@ -218,19 +217,19 @@
         }
 
         .project-1 img {
-            background-color: #f2f2f2; /* Light gray background color */
+            background-color: #f2f2f2;
             padding: 10px;
             border-radius: 10px;
             max-width: 100%;
         }
         .project-2 img {
-            background-color: #f2f2f2; /* Light gray background color */
+            background-color: #f2f2f2; 
             padding: 10px;
             border-radius: 10px;
             max-width: 100%;
         }
         .project-3 img {
-            background-color: #f2f2f2; /* Light gray background color */
+            background-color: #f2f2f2; 
             padding: 10px;
             border-radius: 10px;
             max-width: 100%;
@@ -288,6 +287,16 @@
             }
         }
 
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -383,7 +392,7 @@
                     <img src="github-icon.png" alt="GitHub">
                 </a>
             </p>
-            <!-- Add more contact information as needed -->
+
         </section>                      
     </main>
 
