@@ -1,4 +1,4 @@
-# Jasper John Raguin - Personal Website
+# My Personal Website
 
 ## Overview
 Welcome to the repository of my personal website! This README provides insights into the development process, design choices, and future plans for the website.
