@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasper John Raguin - Personal Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7f7f7; /* Light gray background */
+        }
+
+        header, nav, main, footer {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #2c3e50; /* Dark blue-gray */
+            color: #ecf0f1; /* Light gray text */
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e; /* Dark blue-gray */
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ecf0f1; /* Light gray text */
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50; /* Slightly darker blue-gray on hover */
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            border: 1px solid #bdc3c7; /* Light gray border */
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #ecf0f1; /* Light gray background */
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        h2 {
+            color: #34495e; /* Dark blue-gray heading */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        .skills-icons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skills-icons img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .project {
+            margin-bottom: 1em;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 7em;
+            margin-top: 7em;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            max-width: 20%; 
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 10px 10px 10px rgba(1, 3, 10, 0.1);
+        }
+
+        .profile-info {
+            text-align: center;
+            max-width: 50%;
+        }
+
+        .profile-info .greet,
+        .profile-info .year {
+            font-family: Georgia;
+            color: #7f8c8d; /* Dark gray text */
+            font-size: 20px;
+        }
+
+        .profile-info .name {
+            font-family: Georgia;
+            color: #2c3e50; /* Dark blue-gray text */
+            font-size: 35px;
+        }
+
+        .profile p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 0.5em 0;
+        }
+
+        footer {
+            background-color: #2c3e50; /* Dark blue-gray */
+            color: #ecf0f1; /* Light gray text */
+            padding: 3em;
+            text-align: center;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            align-items: center;
+            margin-left: 5em;
+        }
+
+        .icon-link {
+            margin-right: 20px; /* Adjust margin as needed */
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .icon-link:hover {
+            opacity: .8;
+            transform: translateY(-3px);
+        }
+
+        /* Ensure all icons have the same size */
+        .contact-icons .icon-link img {
+            width: 50px; /* Adjust the size as needed */
+            height: 50px; /* Adjust the size as needed */
+        }
+
+        /* Adjust the x-axis positions of the icons */
+        .contact-icons .icon-link:nth-child(1) {
+            transform: translateX(-30px); /* Adjust as needed */
+        }
+
+        
+        .contact-icons .icon-link:nth-child(3) {
+            transform: translateX(30px); /* Adjust as needed */
+        }
+
+        #projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+
+        #projects p {
+            font-family: Georgia;
+            color: #292929;
+            font-size: 20px;
+        }
+        .project-1,
+        .project-2 {
+            width: 30%; /* Adjust the width as needed */
+            box-sizing: border-box;
+            margin-bottom: 7em;
+            margin-top: 10em;
+            margin-right: 15em;
+            box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.1);
+        }
+        .project-3 {
+            width: 50%; /* Adjust the width as needed */
+            box-sizing: border-box;
+            margin-bottom: 7em;
+            margin-top: 10em;   
+            margin-left: 25em;
+            box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-1 img,
+        .project-2 img,
+        .project-3 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .project-1 img {
+            background-color: #f2f2f2; /* Light gray background color */
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        .project-2 img {
+            background-color: #f2f2f2; /* Light gray background color */
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        .project-3 img {
+            background-color: #f2f2f2; /* Light gray background color */
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: .5;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== MEDIA QUERIES =====*/
+        /* For small devices */
+        @media screen and (max-width: 768px) {
+            .profile-container {
+                margin-top: 3em;
+                margin-bottom: 3em;
+            }
+            .profile img {
+                max-width: 50%;
+                border-radius: 20px;
+            }
+            .profile-info {
+                max-width: 80%;
+            }
+        }
+
+        /* For medium and large devices */
+        @media screen and (min-width: 768px) {
+            .footer {
+                padding: 2em;
+            }
+            .contact-icons .icon-link {
+                margin: 0 20px;
+            }
+            .contact-icons{
+                grid-template-columns: 1fr;
+                justify-items: center;
+                width: 70%;
+            }
+        }
+
+        /* Additional styles for larger screens */
+        @media screen and (min-width: 1024px) {
+            header {
+                padding: 2em;
+            }
+            nav {
+                padding: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jasper John Raguin</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+            
+        <div class="profile-container">
+            <div class="profile">
+                <img src="profilepic.jpg" alt="Profile">
+            </div>
+            <div class="profile-info">
+                <p class="greet">Hello there! 👋 I'm </p>
+                <p class="name">Jasper John Raguin</p>
+                <p class="year">2nd Year CS Student</p>
+            </div>
+        </div>
+
+        <section id="about">
+            <h2>About Me</h2>
+            
+            <p>Hello there! 👋 I am Jasper John Raguin, a passionate Computer Science Student based in San Pedro, Philippines. I am deeply enthusiastic about exploring the vast and exciting world of technology.</p>
+
+            <h3>Areas of Interest</h3>
+            <ul>
+                <li><strong>Software Development:</strong> Creating efficient and elegant solutions through coding is my forte. I love diving into algorithmic challenges and building applications that make a positive impact.</li>
+                <li><strong>Data Science:</strong> I find joy in unraveling meaningful insights from data. Working on data-driven projects and employing machine learning techniques are areas I'm keen on exploring further.</li>
+                <li><strong>Web Development:</strong> Crafting beautiful and responsive web applications brings out my creative side. I enjoy working with modern web technologies to build seamless user experiences.</li>
+                <li><strong>Cybersecurity:</strong> Ensuring the integrity and security of systems is a topic I'm actively delving into. I'm fascinated by ethical hacking and implementing measures to enhance digital security.</li>
+            </ul>
+
+            <h3>Currently Learning</h3>
+            <ul>
+                <li>Exploring advanced topics in machine learning.</li>
+                <li>Enhancing cybersecurity skills through hands-on projects.</li>
+                <li>Keeping up-to-date with the latest trends in web development.</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>💻 Key Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Proficient in C#, Python, and C++.</li>
+                <li><strong>Web Technologies:</strong> Experience with HTML, CSS.</li>
+                <li><strong>Problem Solving:</strong> A strong foundation in algorithmic problem-solving and critical thinking.</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-1">
+                <img src="4pics.png" alt="Project 1">
+                <p>Project 1: Python-based 4 Pics 1 Word Game<br>
+                    Dive into the world of word puzzles with this Python-based rendition of "4 Pics 1 Word." Challenge your wits as you decipher the commonality between four images to find the correct word. A fun and engaging game for word enthusiasts!</p>
+            </div>
+            <div class="project-2">
+                <img src="tetris.png" alt="Project 2">
+                <p>Project 2: Tetris Game Implementation<br>
+                    A classic Tetris game implemented using Python. Challenge yourself with the falling blocks and test your strategy and reflexes in this fun and nostalgic game.</p>
+            </div>
+            <div class="project-3">
+                <img src="Night's-Light.png" alt="Project 3">
+                <p>Project 3: Night's Light<br>
+                    Embark on an epic adventure in "Night's Light," a thrilling platform game. Navigate through challenging levels, overcome obstacles, and defeat the boss to emerge victorious in this exciting gaming experience.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: raguinjasperjohn@gmail.com</p>
+            <a href="https://www.linkedin.com/in/jasper-john-raguin-542587281/" target="_blank">
+                <p>LinkedIn: https://www.linkedin.com/in/jasper-john-raguin-542587281/</p>
+            </a>
+            <p class="contact-icons">
+                <a href="https://www.facebook.com/jasperjohn.raguin/" target="_blank" class="icon-link">
+                    <img src="fb-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/jasper__john/" target="_blank" class="icon-link">
+                    <img src="ig-icon.png" alt="Instagram">
+                </a>
+                <a href="https://github.com/jasjohn9" target="_blank" class="icon-link">
+                    <img src="github-icon.png" alt="GitHub">
+                </a>
+            </p>
+            <!-- Add more contact information as needed -->
+        </section>                      
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JasJohn. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
